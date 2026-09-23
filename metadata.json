@@ -1,0 +1,6 @@
+{
+  "name": "Urban Barbers",
+  "description": "Sharp cuts. Sharper standards. Premium barbershop at 24 Kloof Street, Gardens, Cape Town. Book online for classic haircuts, skin fades, and hot towel shaves.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

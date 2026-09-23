@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Urban Barbers – Sharp Cuts. Sharper Standards. | Cape Town</title>
+    <meta
+      name="description"
+      content="Sharp cuts. Sharper standards. Premium barbershop at 24 Kloof Street, Gardens, Cape Town. Book online for classic haircuts, skin fades, and hot towel shaves."
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Google Fonts: Playfair Display & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,900;1,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Urban Barbers" />
+    <meta property="og:title" content="Urban Barbers – Sharp Cuts. Sharper Standards. | Cape Town" />
+    <meta
+      property="og:description"
+      content="Sharp cuts. Sharper standards. Premium barbershop at 24 Kloof Street, Gardens, Cape Town. Book online for classic haircuts, skin fades, and hot towel shaves."
+    />
+    <meta property="og:image" content="/logo-black.svg" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Urban Barbers – Sharp Cuts. Sharper Standards." />
+    <meta
+      name="twitter:description"
+      content="Sharp cuts. Sharper standards. Premium barbershop at 24 Kloof Street, Gardens, Cape Town. Book online for classic haircuts, skin fades, and hot towel shaves."
+    />
+    <meta name="twitter:image" content="/logo-black.svg" />
+
+    <!-- Structured Data (Schema.org BarberShop) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BarberShop",
+        "name": "Urban Barbers",
+        "description": "Sharp cuts. Sharper standards. Modern and classic barbering in Cape Town.",
+        "image": "/logo-black.svg",
+        "telephone": "+27 21 555 0142",
+        "email": "bookings@urbanbarbers.co.za",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "24 Kloof Street, Gardens",
+          "addressLocality": "Cape Town",
+          "postalCode": "8001",
+          "addressCountry": "ZA"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -33.9298,
+          "longitude": 18.4115
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "19:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Saturday",
+            "opens": "08:00",
+            "closes": "17:00"
+          }
+        ],
+        "priceRange": "R60 - R380",
+        "currenciesAccepted": "ZAR",
+        "paymentAccepted": "Cash, Credit Card, SnapScan"
+      }
+    </script>
+  </head>
+  <body class="bg-[#0F0F0F] text-[#F5F1EA] font-sans antialiased selection:bg-[#C8A15A] selection:text-[#0F0F0F] min-h-screen">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
