@@ -186,7 +186,7 @@ export const LOOKBOOK_ITEMS: LookbookItem[] = [
     category: 'classics',
     categoryLabel: 'Classic Cuts',
     description: 'Full shear graduation for gentlemanly volume, scissor-over-comb sides, and satin sheen.',
-    image: '/images/classic-cut.jpg',
+    image: '/images/scissor-cut.jpg',
     barber: 'Ryan Adams',
     serviceId: 'classic-haircut',
   },
