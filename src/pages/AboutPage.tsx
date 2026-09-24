@@ -78,7 +78,7 @@ export default function AboutPage() {
           <div className="lg:col-span-6">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-[#242424] border border-[#2E2E2E] shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1200&q=80"
+                src="/images/hero-shop.jpg"
                 alt="Urban Barbers shop interior and vintage barber station"
                 className="w-full h-full object-cover object-center"
               />

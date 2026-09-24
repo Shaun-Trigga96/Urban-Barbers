@@ -25,7 +25,7 @@ export default function HomePage() {
         {/* Background Image with Cinematic Scrim */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=2000&q=85"
+            src="/images/hero-shop.jpg"
             alt="Interior of Urban Barbers shop in Kloof Street Cape Town"
             loading="eager"
             className="w-full h-full object-cover object-center opacity-30 scale-105 transform"
