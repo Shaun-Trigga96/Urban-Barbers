@@ -30,6 +30,15 @@ export default function AboutPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Header */}
         <div className="max-w-3xl mb-16 sm:mb-20">
+          {/* Brand Emblem Logo */}
+          <div className="mb-6 inline-block">
+            <img
+              src="/logo.svg"
+              alt="Urban Barbers Emblem"
+              className="h-20 w-20 sm:h-24 sm:w-24 object-contain drop-shadow-[0_4px_16px_rgba(0,0,0,0.7)]"
+            />
+          </div>
+
           <p className="text-xs uppercase tracking-widest text-[#C8A15A] font-medium mb-3">
             Since 2016 · Kloof Street
           </p>

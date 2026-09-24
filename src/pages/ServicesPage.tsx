@@ -32,7 +32,16 @@ export default function ServicesPage() {
     <div className="w-full bg-[#0F0F0F] text-[#F5F1EA] py-14 sm:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Banner */}
-        <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
+        <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20 flex flex-col items-center">
+          {/* Brand Emblem Logo */}
+          <div className="mb-6 flex justify-center">
+            <img
+              src="/logo.svg"
+              alt="Urban Barbers Emblem"
+              className="h-20 w-20 sm:h-24 sm:w-24 object-contain drop-shadow-[0_4px_16px_rgba(0,0,0,0.7)]"
+            />
+          </div>
+
           <p className="text-xs uppercase tracking-widest text-[#C8A15A] font-medium mb-3">
             Menu of Craft
           </p>

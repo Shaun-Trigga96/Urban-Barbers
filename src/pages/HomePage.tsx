@@ -36,6 +36,15 @@ export default function HomePage() {
 
         {/* Hero Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center flex flex-col items-center">
+          {/* Brand Emblem Logo */}
+          <div className="mb-6 flex justify-center">
+            <img
+              src="/logo.svg"
+              alt="Urban Barbers Emblem"
+              className="h-24 w-24 sm:h-28 sm:w-28 object-contain drop-shadow-[0_4px_16px_rgba(0,0,0,0.7)]"
+            />
+          </div>
+
           {/* Subtle Location & Heritage kicker */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1A1A1A]/80 border border-[#2E2E2E] text-xs font-medium text-[#C8A15A] mb-8 tracking-wider uppercase backdrop-blur-sm">
             <MapPin className="w-3.5 h-3.5" />
