@@ -69,52 +69,72 @@ export default function ServicesPage() {
                   {catServices.map((service) => (
                     <div
                       key={service.id}
-                      className="bg-[#181818] border border-[#2B2B2B] rounded-2xl p-6 sm:p-7 flex flex-col justify-between hover:border-[#C8A15A]/60 transition-all duration-200 group"
+                      className="bg-[#181818] border border-[#2B2B2B] rounded-2xl overflow-hidden flex flex-col justify-between hover:border-[#C8A15A]/60 transition-all duration-200 group"
                     >
-                      <div>
-                        <div className="flex items-start justify-between gap-4 mb-3">
-                          <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#F5F1EA] group-hover:text-[#C8A15A] transition-colors">
-                            {service.name}
-                          </h3>
-                          <span className="font-mono text-2xl font-bold text-[#F5F1EA] shrink-0">
-                            R{service.priceZAR}
-                          </span>
-                        </div>
-
-                        {/* Unboxed Metadata discipline */}
-                        <div className="flex items-center gap-2 text-xs text-[#9A9A9A] mb-4">
-                          <span className="flex items-center gap-1 font-mono">
-                            <Clock className="w-3.5 h-3.5 text-[#C8A15A]" />
-                            {service.durationMinutes} minutes
-                          </span>
-                          <span aria-hidden="true">·</span>
-                          <span>In-Shop Payment</span>
+                      {service.image && (
+                        <div className="relative aspect-[16/9] w-full bg-[#242424] overflow-hidden">
+                          <img
+                            src={service.image}
+                            alt={service.name}
+                            loading="lazy"
+                            className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-[#181818] via-transparent to-transparent opacity-85" />
+                          <div className="absolute top-3 right-3">
+                            <span className="font-mono text-lg font-bold text-[#F5F1EA] bg-[#0F0F0F]/80 backdrop-blur-md px-3 py-1 rounded-lg border border-white/10">
+                              R{service.priceZAR}
+                            </span>
+                          </div>
                           {service.featured && (
-                            <>
-                              <span aria-hidden="true">·</span>
-                              <span className="text-[#C8A15A] font-medium flex items-center gap-1">
+                            <div className="absolute top-3 left-3">
+                              <span className="text-[11px] font-medium text-[#C8A15A] bg-[#C8A15A]/20 backdrop-blur-md px-2.5 py-1 rounded-md border border-[#C8A15A]/40 flex items-center gap-1">
                                 <Sparkles className="w-3 h-3" /> Most Popular
                               </span>
-                            </>
+                            </div>
                           )}
                         </div>
+                      )}
 
-                        <p className="text-sm text-[#9A9A9A] leading-relaxed mb-6">
-                          {service.description}
-                        </p>
-                      </div>
+                      <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between">
+                        <div>
+                          <div className="flex items-start justify-between gap-4 mb-2">
+                            <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#F5F1EA] group-hover:text-[#C8A15A] transition-colors">
+                              {service.name}
+                            </h3>
+                            {!service.image && (
+                              <span className="font-mono text-2xl font-bold text-[#F5F1EA] shrink-0">
+                                R{service.priceZAR}
+                              </span>
+                            )}
+                          </div>
 
-                      <div className="pt-4 border-t border-[#262626] flex items-center justify-between">
-                        <span className="text-xs text-[#7A7A7A]">
-                          Includes consultation & styling
-                        </span>
-                        <Link
-                          to={`/contact?service=${service.id}`}
-                          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#C8A15A] text-[#0F0F0F] font-semibold text-xs sm:text-sm hover:bg-[#D8B268] active:scale-[0.98] transition-all min-h-[44px]"
-                        >
-                          <Calendar className="w-4 h-4" />
-                          <span>Book This Service</span>
-                        </Link>
+                          {/* Unboxed Metadata discipline */}
+                          <div className="flex items-center gap-2 text-xs text-[#9A9A9A] mb-3">
+                            <span className="flex items-center gap-1 font-mono">
+                              <Clock className="w-3.5 h-3.5 text-[#C8A15A]" />
+                              {service.durationMinutes} minutes
+                            </span>
+                            <span aria-hidden="true">·</span>
+                            <span>In-Shop Payment</span>
+                          </div>
+
+                          <p className="text-sm text-[#9A9A9A] leading-relaxed mb-6">
+                            {service.description}
+                          </p>
+                        </div>
+
+                        <div className="pt-4 border-t border-[#262626] flex items-center justify-between">
+                          <span className="text-xs text-[#7A7A7A]">
+                            Includes hot lather & razor finish
+                          </span>
+                          <Link
+                            to={`/contact?service=${service.id}`}
+                            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#C8A15A] text-[#0F0F0F] font-semibold text-xs sm:text-sm hover:bg-[#D8B268] active:scale-[0.98] transition-all min-h-[44px]"
+                          >
+                            <Calendar className="w-4 h-4" />
+                            <span>Book This Service</span>
+                          </Link>
+                        </div>
                       </div>
                     </div>
                   ))}

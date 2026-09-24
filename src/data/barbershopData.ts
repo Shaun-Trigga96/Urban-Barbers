@@ -1,4 +1,4 @@
-import { Barber, Service } from '../types';
+import { Barber, LookbookItem, Service } from '../types';
 
 export const BUSINESS_INFO = {
   name: 'Urban Barbers',
@@ -36,6 +36,7 @@ export const SERVICES: Service[] = [
     priceZAR: 150,
     description: 'Precision cut tailored to your head shape and hair texture, styled with premium matte clay.',
     featured: true,
+    image: 'https://images.unsplash.com/photo-1512690459411-b9245aed614b?auto=format&fit=crop&w=800&q=80',
   },
   {
     id: 'skin-fade',
@@ -46,6 +47,7 @@ export const SERVICES: Service[] = [
     priceZAR: 190,
     description: 'Ultra-clean zero-to-length gradient blend, finished with foil shaver and razor neck edge-up.',
     featured: true,
+    image: 'https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=800&q=80',
   },
   {
     id: 'taper-fade',
@@ -55,6 +57,7 @@ export const SERVICES: Service[] = [
     durationMinutes: 45,
     priceZAR: 180,
     description: 'Refined graduation at the temples and neckline while preserving clean weight through the sides.',
+    image: 'https://images.unsplash.com/photo-1593702295094-aea22597af65?auto=format&fit=crop&w=800&q=80',
   },
   {
     id: 'scissor-cut',
@@ -64,6 +67,7 @@ export const SERVICES: Service[] = [
     durationMinutes: 45,
     priceZAR: 200,
     description: 'Full shear-work styling for medium-to-long hair, focusing on texture, natural flow, and movement.',
+    image: 'https://images.unsplash.com/photo-1517832606589-7157be614e5b?auto=format&fit=crop&w=800&q=80',
   },
 
   // Beard & Shave
@@ -75,6 +79,7 @@ export const SERVICES: Service[] = [
     durationMinutes: 20,
     priceZAR: 100,
     description: 'Detailed length reduction, cheek line razor definition, and organic argan conditioning oil.',
+    image: 'https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=800&q=80',
   },
   {
     id: 'hot-towel-shave',
@@ -85,6 +90,7 @@ export const SERVICES: Service[] = [
     priceZAR: 150,
     description: 'Traditional straight razor shave with essential oil steamed towels, pre-shave cream, and soothing balm.',
     featured: true,
+    image: 'https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=800&q=80',
   },
 
   // Combos
@@ -97,6 +103,7 @@ export const SERVICES: Service[] = [
     priceZAR: 260,
     description: 'Any signature haircut paired with complete beard grooming, foil finish, and warm styling rinse.',
     featured: true,
+    image: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80',
   },
   {
     id: 'the-full-works',
@@ -106,6 +113,7 @@ export const SERVICES: Service[] = [
     durationMinutes: 90,
     priceZAR: 380,
     description: 'Signature cut, full beard sculpt, eucalyptus hot towel compress, scalp cleanse, and relaxing facial massage.',
+    image: 'https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=800&q=80',
   },
 
   // Kids & Extras
@@ -117,6 +125,7 @@ export const SERVICES: Service[] = [
     durationMinutes: 30,
     priceZAR: 110,
     description: 'Patient, gentle styling for young gentlemen under 12. Fun, sharp, and easy to maintain.',
+    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80',
   },
   {
     id: 'line-up-edge-up',
@@ -126,6 +135,7 @@ export const SERVICES: Service[] = [
     durationMinutes: 15,
     priceZAR: 70,
     description: 'Razor-crisp hairline detailing around the temples, ears, and neck between full haircuts.',
+    image: 'https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=800&q=80',
   },
   {
     id: 'hair-wash-style',
@@ -135,6 +145,70 @@ export const SERVICES: Service[] = [
     durationMinutes: 15,
     priceZAR: 60,
     description: 'Invigorating tea tree scalp wash, blow-dry finish, and styling using premium pomade or sea salt spray.',
+    image: 'https://images.unsplash.com/photo-1517832606589-7157be614e5b?auto=format&fit=crop&w=800&q=80',
+  },
+];
+
+export const LOOKBOOK_ITEMS: LookbookItem[] = [
+  {
+    id: 'look-1',
+    title: 'High Contrast Mid Skin Fade',
+    category: 'fades',
+    categoryLabel: 'Skin Fades',
+    description: 'Seamless graduation down to the skin at temple height, paired with heavy textured matte crop on top.',
+    image: 'https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=900&q=85',
+    barber: 'Sipho "Shaz" Dlamini',
+    serviceId: 'skin-fade',
+  },
+  {
+    id: 'look-2',
+    title: 'Low Drop Taper & Razor Edge',
+    category: 'fades',
+    categoryLabel: 'Skin Fades',
+    description: 'Subtle taper behind the ear and neck with clean straight-line hairline detailing.',
+    image: 'https://images.unsplash.com/photo-1593702295094-aea22597af65?auto=format&fit=crop&w=900&q=85',
+    barber: 'Sipho "Shaz" Dlamini',
+    serviceId: 'taper-fade',
+  },
+  {
+    id: 'look-3',
+    title: 'Sculpted Beard & Razor Contour',
+    category: 'beards',
+    categoryLabel: 'Beard & Shave',
+    description: 'Graduated sideburn-to-beard blend with sharp razor cheek line and organic balm finish.',
+    image: 'https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=900&q=85',
+    barber: 'Lebo Mokoena',
+    serviceId: 'beard-trim-shape',
+  },
+  {
+    id: 'look-4',
+    title: 'Modern Classic Scissor Silhouette',
+    category: 'classics',
+    categoryLabel: 'Classic Cuts',
+    description: 'Full shear graduation for gentlemanly volume, scissor-over-comb sides, and satin sheen.',
+    image: 'https://images.unsplash.com/photo-1512690459411-b9245aed614b?auto=format&fit=crop&w=900&q=85',
+    barber: 'Ryan Adams',
+    serviceId: 'classic-haircut',
+  },
+  {
+    id: 'look-5',
+    title: 'Traditional Steamed Towel Shave',
+    category: 'beards',
+    categoryLabel: 'Beard & Shave',
+    description: 'Triple hot eucalyptus compress with Japanese feather straight razor and cold rosewater tonic.',
+    image: 'https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=900&q=85',
+    barber: 'Ryan Adams',
+    serviceId: 'hot-towel-shave',
+  },
+  {
+    id: 'look-6',
+    title: 'Signature Cut & Beard Fusion',
+    category: 'combos',
+    categoryLabel: 'Combos',
+    description: 'Harmonious skin taper merging directly into a full sculpted beard with razor-sharp cheek lines.',
+    image: 'https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=900&q=85',
+    barber: 'Sipho "Shaz" Dlamini',
+    serviceId: 'cut-beard-combo',
   },
 ];
 

@@ -13,6 +13,7 @@ import {
   CheckCircle2,
 } from 'lucide-react';
 import { BARBERS, BUSINESS_INFO, GALLERY_ITEMS, SERVICES, TESTIMONIALS, WHY_CHOOSE_US } from '../data/barbershopData';
+import LookbookSection from '../components/LookbookSection';
 
 export default function HomePage() {
   const featuredServices = SERVICES.filter((s) => s.featured).slice(0, 4);
@@ -116,45 +117,63 @@ export default function HomePage() {
             {featuredServices.map((service) => (
               <div
                 key={service.id}
-                className="bg-[#1C1C1C] border border-[#2E2E2E] rounded-2xl p-6 flex flex-col justify-between hover:border-[#C8A15A]/60 transition-all duration-200 group"
+                className="bg-[#1C1C1C] border border-[#2E2E2E] rounded-2xl overflow-hidden flex flex-col justify-between hover:border-[#C8A15A]/60 transition-all duration-200 group"
               >
-                <div>
-                  <div className="flex items-center justify-between text-xs text-[#9A9A9A] mb-3">
-                    <span className="uppercase tracking-wider font-medium text-[#C8A15A]">
+                {service.image && (
+                  <div className="relative aspect-[16/10] w-full bg-[#242424] overflow-hidden">
+                    <img
+                      src={service.image}
+                      alt={service.name}
+                      loading="lazy"
+                      className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#1C1C1C] via-transparent to-transparent opacity-80" />
+                    <span className="absolute bottom-2 left-3 text-[11px] font-mono font-medium text-[#C8A15A] uppercase tracking-wider">
                       {service.categoryName}
                     </span>
-                    <span className="flex items-center gap-1 font-mono">
-                      <Clock className="w-3.5 h-3.5 text-[#9A9A9A]" />
-                      {service.durationMinutes} min
-                    </span>
+                  </div>
+                )}
+
+                <div className="p-5 flex-1 flex flex-col justify-between">
+                  <div>
+                    <div className="flex items-center justify-between text-xs text-[#9A9A9A] mb-2">
+                      <span className="flex items-center gap-1 font-mono">
+                        <Clock className="w-3.5 h-3.5 text-[#C8A15A]" />
+                        {service.durationMinutes} min
+                      </span>
+                      <span className="font-mono text-base font-bold text-[#F5F1EA]">
+                        R{service.priceZAR}
+                      </span>
+                    </div>
+
+                    <h3 className="font-serif text-xl font-bold text-[#F5F1EA] group-hover:text-[#C8A15A] transition-colors mb-2">
+                      {service.name}
+                    </h3>
+
+                    <p className="text-xs text-[#9A9A9A] leading-relaxed mb-4">
+                      {service.description}
+                    </p>
                   </div>
 
-                  <h3 className="font-serif text-xl font-bold text-[#F5F1EA] group-hover:text-[#C8A15A] transition-colors mb-2">
-                    {service.name}
-                  </h3>
-
-                  <p className="text-sm text-[#9A9A9A] leading-relaxed mb-6">
-                    {service.description}
-                  </p>
-                </div>
-
-                <div className="pt-4 border-t border-[#262626] flex items-center justify-between">
-                  <span className="font-mono text-xl font-bold text-[#F5F1EA]">
-                    R{service.priceZAR}
-                  </span>
-                  <Link
-                    to={`/contact?service=${service.id}`}
-                    className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-[#C8A15A] text-[#0F0F0F] text-xs font-semibold hover:bg-[#D8B268] transition-colors min-h-[40px]"
-                  >
-                    <span>Book</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
+                  <div className="pt-3 border-t border-[#262626] flex items-center justify-between">
+                    <span className="text-[11px] text-[#7A7A7A]">In-Shop Settle</span>
+                    <Link
+                      to={`/contact?service=${service.id}`}
+                      className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-[#C8A15A] text-[#0F0F0F] text-xs font-semibold hover:bg-[#D8B268] transition-colors min-h-[38px]"
+                    >
+                      <span>Book Chair</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </Link>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
         </div>
       </section>
+
+      {/* Lookbook / Skin Fades Showcase */}
+      <LookbookSection />
 
       {/* 3. Why Choose Us Section */}
       <section className="py-20 md:py-28 bg-[#0F0F0F] relative">
