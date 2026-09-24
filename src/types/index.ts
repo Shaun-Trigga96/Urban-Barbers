@@ -9,6 +9,18 @@ export interface Service {
   priceZAR: number;
   description: string;
   featured?: boolean;
+  image?: string;
+}
+
+export interface LookbookItem {
+  id: string;
+  title: string;
+  category: 'fades' | 'beards' | 'classics' | 'combos';
+  categoryLabel: string;
+  description: string;
+  image: string;
+  barber: string;
+  serviceId: string;
 }
 
 export interface Barber {
